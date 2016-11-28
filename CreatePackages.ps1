@@ -17,7 +17,7 @@ function Create-Packages() {
     foreach ($projectFile in Get-ChildItem -Include *.csproj -Recurse)
     {
         
-	    &$nugetFilePath pack $projectFile -Build -Properties Configuration=Release -OutputDirectory $OutputFolderPath | Write-Verbose
+	    &$nugetFilePath pack $projectFile -Build -Properties Configuration=Debug -OutputDirectory $OutputFolderPath | Write-Verbose
     }
 }
 
